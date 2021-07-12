@@ -1,0 +1,12 @@
+---
+layout: layout.liquid
+pagination:
+    data: work
+    size: 1
+    alias: work
+permalink: "work/{{ work.title | slug }}/"
+---
+
+<section class="work">
+  {{ content | safe }}
+</section>

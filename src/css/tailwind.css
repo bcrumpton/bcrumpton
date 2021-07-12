@@ -1,0 +1,91 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700&display=swap");
+
+img {
+  max-width: 100%;
+  box-shadow: 0 8px 14px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  /* border-bottom: 4px solid #210124; */
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Source Serif Pro", sans-serif;
+  background: #f8f8f0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  color: #750d37;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: #210124;
+  transition: all 0.3s ease-in-out;
+}
+
+.dark-purple {
+  color: #210124;
+}
+
+.button {
+  @apply rounded-md text-theme-purple bg-theme-orange px-4 py-2 font-bold drop-shadow-xl;
+}
+
+#inner-ring {
+  animation: turn-left 50s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#outer-ring {
+  animation: turn-right 50s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#right-mug,
+#left-mug {
+  animation: up-down 1.5s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+@keyframes up-down {
+  from {
+    transform: translateY(2.5%);
+  }
+  to {
+    transform: translateY(-2.5%);
+  }
+}
+
+@keyframes turn-left {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes turn-right {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}

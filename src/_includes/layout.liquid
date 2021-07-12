@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700&display=swap" rel="stylesheet"> 
+        <link href="/css/styles.css" rel="stylesheet" type="text/css"/>
+        <script src="https://kit.fontawesome.com/6c8d926e2b.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="max-w-6xl mx-auto">
+                <div class="masthead p-2 flex justify-between">
+                    <h4 class="text-4xl font-bold"><a href="/">bcrumpton</a></h4>
+                    <nav class="nav flex">
+                        <ul class="nav__menu flex">
+                            <li class="nav__menu-item"><a href="/work">Work</a></li>
+                            <li class="ml-4 nav__menu-item"><a href="/about">About</a></li>
+                        </ul>
+                        <div class="ml-4 socials">
+                            <a target="_blank" href="https://github.com/bcrumpton"><i class="fab fa-github"></i></a>
+                            <a class="ml-4" target="_blank" href="mailto:crumptonbrannon@gmail.com"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content {% if page.url == "/" %} flex items-center {% endif %}">
+            {% if page.url == "/" %}
+                
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid auto-rows-min md:grid-cols-2">
+                        <div class="flex flex-col justify-center p-2">
+                            <h1 class="dark-purple text-6xl font-bold">Hi! 👋</h1>
+                            <h2 class="dark-purple text-6xl font-bold">I'm Brannon.</h2>
+                            <h2 class="dark-purple text-6xl font-bold">A front end developer.</h2>
+                        </div>
+                        <div class="max-w-full p-2">
+                            {{ '/public/img/beer-celebration.svg' | svgContents }}
+                        </div>
+                    </div>
+                </div>
+                
+            {% endif %}
+            
+            <div class="max-w-6xl mx-auto">
+                {{ content | safe }}
+            </div>
+        </main>
+
+        <footer class="mt-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="footer p-2">
+                    <p class="font-bold">Copyright <script>document.write(new Date().getFullYear())</script> &copy; Brannon Crumpton</p>
+                </div>
+            </div>
+        </footer> 
+
+    </body>
+
+</html>
