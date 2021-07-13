@@ -27,13 +27,12 @@ body {
 }
 
 a {
-  color: #750d37;
+  color: #340239;
   transition: all 0.3s ease-in-out;
 }
 
-a:hover,
-a:focus {
-  color: #210124;
+a:hover {
+  color: #17A398;
   transition: all 0.3s ease-in-out;
 }
 
