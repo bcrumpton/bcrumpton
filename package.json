@@ -34,7 +34,6 @@
     "tailwindcss": "^2.2.4"
   },
   "dependencies": {
-    "@11ty/eleventy-upgrade-help": "^3.0.0",
     "eleventy-plugin-svg-contents": "^0.7.0"
   }
 }
